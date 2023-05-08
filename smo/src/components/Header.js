@@ -1,48 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../img/logo.png";
 import menu from "../img/icons8-menu-rounded-50.png";
 import noti from "../img/icons8-알림-30.png";
+import Modal from "./Modal";
+import styles from "./Header.module.css";
+import Scrollbar from "./Scrollbar";
+import ScrollbarStyle from "./Scrollbar.module.css";
+
+
 const Header = (props) => {
+  const [showMenuModal, setShowMenuModal] = useState(false);
+  const [showNotificationModal, setShowNotificationModal] = useState(false);
+
+  const handleMenuClick = () => {
+    setShowMenuModal(true);
+  };
+
+  const handleNotificationClick = () => {
+    setShowNotificationModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowMenuModal(false);
+    setShowNotificationModal(false);
+  };
+
   return (
-    <div
-      style={{
-        top: 0,
-        left: 0,
-        width: "100%",
-        height: "70px",
-        backgroundColor: "#ffffff",
-        boxShadow: "0 2px 4px rgba(0,0,0,.1)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
-        flexWrap: "nowrap",
-      }}
-    >
+    <div className={styles.container}>
       {props.useButton ? (
         <img
-          style={{ flex: "1", maxWidth: "8%", height: "50%" }}
+          className={styles.menuIcon}
           src={menu}
           alt="menu"
+          onClick={handleMenuClick}
         />
       ) : (
-        <div style={{ flex: "1", maxWidth: "10%", height: "auto" }} />
+        <div className={styles.placeholder} />
       )}
-      <img
-        style={{ flex: "1", maxWidth: "70%", height: "auto" }}
-        src={logo}
-        alt="logo"
-      />
+      <img className={styles.logo} src={logo} alt="logo" />
       {props.useButton ? (
         <img
-          style={{ flex: "1", maxWidth: "8%", height: "50%" }}
+          className={styles.notificationIcon}
           src={noti}
           alt="noti"
+          onClick={handleNotificationClick}
         />
       ) : (
-        <div style={{ flex: "1", maxWidth: "10%", height: "auto" }} />
+        <div className={styles.placeholder} />
       )}
-    </div>
-  );
-};
+      {showMenuModal && (
+        <Modal show={showMenuModal} onClose={handleCloseModal} title="Menu">
+          <Scrollbar className={ScrollbarStyle.scrollbar_container}></Scrollbar>
+        </Modal>
+      )}
+      {showNotificationModal && (
+        <Modal
+          show={showNotificationModal}
+          onClose={handleCloseModal}
+          title="Notification"
+        >
+          <Scrollbar className={ScrollbarStyle.scrollbar_container}></Scrollbar>
+        </Modal>
+
+     ) }</div>)}
+
 
 export default Header;
+      
