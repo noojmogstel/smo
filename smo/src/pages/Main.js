@@ -6,6 +6,7 @@ import Nav from "../components/Nav";
 import Posting from "./Posting";
 import Find from "./Find";
 import Profile from "./Profile";
+import Test from "./Test";
 
 const Main = () => {
   return (
@@ -17,10 +18,9 @@ const Main = () => {
         <Route path="/find" element={<Find />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/home" element={<Home />} />
-       
+        <Route path="/test" element={<Test />} />
       </Routes>
-      <Nav/>
-
+      <Nav />
     </div>
   );
 };
