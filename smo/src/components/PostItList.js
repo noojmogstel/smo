@@ -63,7 +63,9 @@ const PostItList = ({ posts }) => {
           position={getRandomPosition()}
           angle={getRandomAngle()}
         />
+
       ))}
+     
     </Slider>
   );
 };

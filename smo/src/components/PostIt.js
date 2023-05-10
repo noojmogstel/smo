@@ -8,21 +8,27 @@ const PostItWrapper = styled.div`
   left: ${({ position }) => position.left};
   transform: rotate(${({ angle }) => angle}deg);
   opacity: 0.9;
-  width: 40%;
+  width: 30%;
   height: 20%;
   padding: 20px;
 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   cursor: move;
   margin-top: 20%;
+  margin-right: 2px;
+  
+  display: inline-block;
 `;
 
 const PostIt = ({ title, content, color, position, angle }) => {
   return (
+    <div>
     <PostItWrapper color={color} position={position} angle={angle}>
       <h3>{title}</h3>
       <p>{content}</p>
     </PostItWrapper>
+    
+    </div>
   );
 };
 

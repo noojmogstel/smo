@@ -10,8 +10,7 @@ const Posting = () => {
         <Input className={styleInput.input}placeholder="제목을 입력하세요." valid="true">
         글제목
         </Input>
-        <Button className={styleInput.input}>사진첨부</Button>
-
+        
         <Button className={styleButton.button}>글쓰기</Button>
         </div>
     );

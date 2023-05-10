@@ -8,10 +8,12 @@ import Find from "./Find";
 import Profile from "./Profile";
 import Test from "./Test";
 
+
 const Main = () => {
   return (
     <div>
       <Header useButton="true"></Header>
+      <div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/posting" element={<Posting />} />
@@ -20,6 +22,7 @@ const Main = () => {
         <Route path="/home" element={<Home />} />
         <Route path="/test" element={<Test />} />
       </Routes>
+      </div>
       <Nav />
     </div>
   );

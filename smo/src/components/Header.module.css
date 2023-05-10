@@ -12,23 +12,26 @@
   }
   
   .menuIcon {
-    flex: 1;
-    max-width: 8%;
-    height: 50%;
-    margin-right: 5%;
+    
+    
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
   }
   
   .logo {
-    flex: 1;
+    
     max-width: 70%;
     height: auto;
   }
   
   .notificationIcon {
-    flex: 1;
-    max-width: 8%;
-    height: 50%;
-    margin-left: 5%;
+    
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    margin-right: 5px;
   }
   
   .placeholder {
