@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-function Scrollbar( props) {
+function Scrollbar(props) {
   const containerRef = useRef();
 
   function handleWheel(e) {

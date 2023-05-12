@@ -1,5 +1,6 @@
 import React from "react";
 import PostItList from "../components/PostItList";
+import Topic from "../components/Topic";
 
 const Test = () => {
   const posts = [
@@ -57,7 +58,7 @@ const Test = () => {
 
   return (
     <div>
-      <PostItList posts={posts} />
+      <Topic />
     </div>
   );
 };
