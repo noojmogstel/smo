@@ -7,7 +7,9 @@
   overflow: hidden;
   margin-left: 2%;
   margin-right: 2%;
-  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .scrollbar_content {
@@ -16,7 +18,7 @@
   grid-gap: 20px;
   padding: 20px;
 }
-.scrollbar_bigger{
+.scrollbar_bigger {
   height: 50vh;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -25,5 +27,4 @@
   overflow: hidden;
   margin-left: 2%;
   margin-right: 2%;
-  
 }

@@ -4,6 +4,7 @@ import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Starting from "./pages/Starting";
 import Main from "./pages/Main";
+import KakaoLogin from "./pages/KakaoLogin";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/main/*" element={<Main />} />
+        <Route path="/KakaoLogin" element={<KakaoLogin />} />
       </Routes>
     </div>
   );
