@@ -34,7 +34,6 @@ const Login = () => {
       <Button className={styleButton.button}>로그인 하기!</Button>
       <Box>SNS 계정으로 로그인</Box>
       <Kakao />
-      <div>asdf</div>
       <GoogleLogins />
       <NaverLogin />
       <Box>아직 회원이 아니신가요?</Box>

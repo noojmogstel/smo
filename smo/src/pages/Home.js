@@ -11,10 +11,10 @@ const Home = () => {
     <div>
       <Head1>나의 포스트</Head1>
       <Scrollbar className={styleScrollbar.scrollbar_container}>
-        <Thumbnail imageUrl={profile} title="무야호호"></Thumbnail>
-        <Thumbnail imageUrl={profile} title="무야호호"></Thumbnail>
-        <Thumbnail imageUrl={profile} title="무야호호"></Thumbnail>
-        <Thumbnail imageUrl={profile} title="무야호호"></Thumbnail>
+        <Thumbnail imageUrl={profile} title="제목"></Thumbnail>
+        <Thumbnail imageUrl={profile} title="제목"></Thumbnail>
+        <Thumbnail imageUrl={profile} title="제목"></Thumbnail>
+        <Thumbnail imageUrl={profile} title="제목"></Thumbnail>
       </Scrollbar>
       <Head1>친구의 포스트</Head1>
       <Scrollbar className={styleScrollbar.scrollbar_container}></Scrollbar>

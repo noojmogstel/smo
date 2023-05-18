@@ -7,7 +7,7 @@ const PostItWrapper = styled.div`
   top: ${({ position }) => position.top};
   left: ${({ position }) => position.left};
   transform: rotate(${({ angle }) => angle}deg);
-  opacity: 0.9;
+  opacity: 0.8;
   width: 200px;
   height: 200px;
   padding: 10px;
