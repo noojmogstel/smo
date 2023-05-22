@@ -5,7 +5,17 @@ import Input from "../components/Input";
 import Button from "../components/Button";
 import styleInput from "../components/Input.module.css";
 import styleButton from "../components/Button.module.css";
+<<<<<<< HEAD
 const SignUp = () => {
+=======
+import { useDispatch } from "react-redux";  
+import {signup}  from "../modules/signup";
+import { useNavigate } from "react-router-dom";
+const SignUp = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [name, setName] = useState("");
+>>>>>>> e86c036dc8b817f4ecbfdd5be98cad1ab17a2261
   const [email, setEmail] = useState("");
   const [isValidEmail, setIsValidEmail] = useState(true);
   const [password, setPassword] = useState("");
@@ -18,6 +28,24 @@ const SignUp = () => {
   const passwordRChangeHandler = (event) => {
     setPasswordR(event.target.value);
   };
+<<<<<<< HEAD
+=======
+
+  const nameChangeHandler = (event) => {
+    setName(event.target.value);
+  };
+
+  //Post 요청
+  const handleSubmit = async () => {
+   const res = await dispatch(signup(email, name, email, password));
+    console.log(res)
+    console.log(res.message)
+    
+    alert("Success");
+    navigate("/login");
+  };
+  
+>>>>>>> e86c036dc8b817f4ecbfdd5be98cad1ab17a2261
   useEffect(() => {
     if (password === passwordR) {
       setPasswordCheck(true);
@@ -37,7 +65,11 @@ const SignUp = () => {
     <div>
       <Header />
       <Box>회원가입</Box>
+<<<<<<< HEAD
       <Input className={styleInput.input}placeholder="이름을 입력하세요." valid="true">
+=======
+      <Input className={styleInput.input} onChange={nameChangeHandler} placeholder="이름을 입력하세요." valid="true">
+>>>>>>> e86c036dc8b817f4ecbfdd5be98cad1ab17a2261
         이름
       </Input>
       <Input
@@ -81,7 +113,11 @@ const SignUp = () => {
       <Input className={styleInput.input} placeholder="인증번호를 입력하세요." valid="true">
         인증번호
       </Input>
+<<<<<<< HEAD
       <Button className={styleButton.button}>회원가입</Button>
+=======
+      <Button onClick={handleSubmit} className={styleButton.button}>회원가입</Button>
+>>>>>>> e86c036dc8b817f4ecbfdd5be98cad1ab17a2261
     </div>
   );
 };
